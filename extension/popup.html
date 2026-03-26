@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENTINEL</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-top">
+        <div class="title">SENTINEL</div>
+        <div class="status-indicator">
+          <div class="live-dot"></div>
+          <span class="status-text">STANDBY</span>
+        </div>
+      </div>
+      <div class="subtitle">AI Focus Guardian</div>
+    </div>
+
+    <!-- GOAL INPUT -->
+    <div class="goal-section">
+      <div class="goal-label">Current Objective</div>
+      <div style="display: flex; gap: 8px;">
+        <input
+          type="text"
+          id="goal-input"
+          class="goal-input"
+          placeholder="Enter your goal (e.g. Learn React)"
+          autocomplete="off"
+          style="flex: 1;"
+        >
+        <button id="mic-btn" class="mic-btn" style="background: var(--surface-light, rgba(255,255,255,0.1)); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: white; cursor: pointer; padding: 0 12px; font-size: 16px;">🎤</button>
+      </div>
+      <div class="mission-feedback" id="mission-feedback">Target Locked. Ready for execution.</div>
+    </div>
+
+    <!-- STRICT MODE -->
+    <div class="controls">
+      <div class="strict-mode-info">
+        <span class="strict-mode-label">Strict Mode</span>
+        <span class="strict-mode-desc">Enforce extreme focus constraints</span>
+      </div>
+      <div class="toggle-switch" id="toggle-switch">
+        <div class="toggle-switch-thumb"></div>
+      </div>
+    </div>
+
+    <!-- TASKS SECTION -->
+    <div class="tasks-section">
+      <div class="tasks-header">
+        <span class="tasks-label">TASKS</span>
+        <span class="distraction-badge">⚡ <span id="distraction-count">0</span> distractions</span>
+      </div>
+      <ul class="popup-task-list" id="popup-task-list">
+        <li class="task-empty">No tasks yet.</li>
+      </ul>
+      <div class="task-add-row">
+        <input
+          type="text"
+          id="task-input"
+          class="task-input"
+          placeholder="Add a task..."
+          autocomplete="off"
+        >
+        <button class="task-add-btn" id="add-task-btn">+</button>
+      </div>
+    </div>
+
+    <!-- MAIN BUTTON -->
+    <button class="start-btn" id="activate-btn">
+      <span class="btn-text">START FOCUS</span>
+      <span class="loading-text" id="loading-text">Activating...</span>
+    </button>
+
+    <!-- FULL PANEL BUTTON -->
+    <div class="secondary-btn-wrapper">
+      <button class="secondary-btn" id="open-panel">
+        OPEN FULL PANEL
+      </button>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

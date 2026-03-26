@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENTINEL Side Panel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">🛡️ SENTINEL</div>
+      <div class="live-indicator"><span class="dot"></span> LIVE</div>
+    </header>
+
+    <!-- Goal Section -->
+    <section class="card goal-card">
+      <div class="label">GOAL</div>
+      <div class="goal-text" id="goal-display">Not Set</div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-text" id="progress-text">0% PROGRESS</div>
+    </section>
+
+    <!-- Score Section -->
+    <section class="card status-card" id="status-card" data-status="neutral">
+      <div class="score-container">
+        <svg class="score-ring" width="120" height="120">
+          <circle class="ring-bg" cx="60" cy="60" r="45"></circle>
+          <circle class="ring-progress" id="score-ring-progress" cx="60" cy="60" r="45"></circle>
+        </svg>
+        <div class="score-value" id="score-value">--</div>
+      </div>
+      <div class="status-label" id="status-label">STATUS: ⚪ STANDBY</div>
+    </section>
+
+    <!-- Current Page Section -->
+    <section class="card page-card">
+      <div class="label">📍 CURRENT PAGE</div>
+      <div class="page-title" id="page-title">Waiting for data...</div>
+      <div class="ai-message-container">
+        <div class="ai-message" id="ai-message">Monitoring active...</div>
+      </div>
+      <button class="btn voice-btn" id="speak-btn">🔊 SPEAK</button>
+      <div class="voice-wave" id="voice-wave">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <!-- Time Tracking Section -->
+    <section class="card time-card">
+      <div class="time-row focus">
+        <span>⏱ FOCUS:</span>
+        <span id="focus-time">0m 0s</span>
+      </div>
+      <div class="time-row wasted">
+        <span>💀 WASTED:</span>
+        <span id="wasted-time">0m 0s</span>
+      </div>
+      <div class="time-row" style="border-top: 1px solid rgba(255,255,255,0.08); margin-top: 6px; padding-top: 6px;">
+        <span>🎯 SCORE:</span>
+        <span id="focus-score-display" style="color: var(--accent-cyan, #00d4ff);">—</span>
+      </div>
+    </section>
+
+    <!-- Tasks Section -->
+    <section class="card tasks-card">
+      <div class="label">📋 TASKS <button id="add-task-btn" class="text-btn">[+ ADD]</button></div>
+      <div class="task-list" id="task-list">
+        <!-- Tasks injected here -->
+      </div>
+    </section>
+
+    <!-- AI Suggestion Section -->
+    <section class="card suggest-card">
+      <div class="label">🎯 AI SUGGESTS NEXT:</div>
+      <div class="suggestion-text" id="suggestion-text">Analyzing patterns...</div>
+      <button class="btn outline-btn" id="get-suggestion-btn">GET SUGGESTION</button>
+    </section>
+
+    <!-- Controls Section -->
+    <section class="controls">
+      <button class="control-btn" id="strict-mode-btn">⚙️ STRICT: OFF</button>
+      <button class="control-btn" id="mic-btn">🎤 MIC</button>
+    </section>
+  </div>
+
+  <script src="sidepanel.js"></script>
+
+  <!-- Session End Modal -->
+  <div id="session-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content card">
+      <h2 style="color: var(--accent-cyan); font-family: var(--font-header); margin-bottom: 16px;">SESSION COMPLETE</h2>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <span>Total Time:</span> <span id="modal-total-time">--</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px; color: var(--accent-cyan);">
+        <span>Focus Time:</span> <span id="modal-focus-time">--</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 16px; color: var(--accent-red);">
+        <span>Wasted Time:</span> <span id="modal-wasted-time">--</span>
+      </div>
+      <div style="margin-bottom: 16px; font-size: 0.85rem; color: var(--text-muted);">
+        Distractions Blocked: <span id="modal-distractions" style="color: #fff;">0</span>
+      </div>
+      <button id="new-session-btn" class="btn" style="background: var(--accent-cyan); color: #000; font-weight: bold;">START NEW SESSION</button>
+    </div>
+  </div>
+</body>
+</html>
