@@ -234,11 +234,14 @@ Goal: “Learn HTML”
 🟢 You open a relevant page
 → ✅ Allowed
 → You stay focused
+(Example: HTML docs, tutorials, even a relevant YouTube lesson)
 🟠 You open a weak / partially relevant page
 → ⚠️ Warning appears
 → Glowing border shows
 → “This is not strongly related to your goal.”
-🔴 You open a distraction (YouTube, social media, random site)
+🔴 You open clearly unrelated content
+→ 🚫 Off-track detected
+(Example: entertainment videos, random browsing, social media scrolling)
 → If Strict Mode = OFF
 → ⚠️ Only warning
 → You still have control
@@ -251,7 +254,8 @@ Goal: “Learn HTML”
 • You stay aware (normal mode)
 • Or fully controlled (strict mode)
 Sentinel doesn’t just track…
-👉 It enforces focus when you choose.
+👉 It evaluates relevance and enforces focus when you choose.
+
 ---
 
 # 🚀 FUTURE IDEAS
