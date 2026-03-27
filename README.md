@@ -225,34 +225,33 @@ npm start
 
 ---
 
-# 🎥 DEMO
+# 🧠 USE CASE
 
-👉 Watch `explain.mp4`
-
----
-
-# 🧪 USE CASE
-
-Goal: **Learn HTML**
-
-| Action              | Result             |
-| ------------------- | ------------------ |
-| Open W3Schools HTML | ✅ Allowed          |
-| Open React tutorial | ⚠️ Warning         |
-| Open YouTube movie  | ❌ Block + Redirect |
-
----
-
-# 🏆 WHY THIS IS UNIQUE
-
-* Not just tracking → **enforcing**
-* Real-time AI decision engine
-* Visual + behavioral control system
-* Voice + UI + AI combined
-
-👉 This is not a tool
-👉 This is a **discipline system**
-
+Sentinel works for any goal.
+🎯 Example:
+Goal: “Learn HTML”
+(or trading, studying, coding — anything)
+🟢 You open a relevant page
+→ ✅ Allowed
+→ You stay focused
+🟠 You open a weak / partially relevant page
+→ ⚠️ Warning appears
+→ Glowing border shows
+→ “This is not strongly related to your goal.”
+🔴 You open a distraction (YouTube, social media, random site)
+→ If Strict Mode = OFF
+→ ⚠️ Only warning
+→ You still have control
+→ If Strict Mode = ON
+→ 🚫 Full-screen intervention
+→ “This is NOT your goal.”
+→ ⏳ Short delay
+→ 🔁 Forced back to your last productive page
+🎯 RESULT
+• You stay aware (normal mode)
+• Or fully controlled (strict mode)
+Sentinel doesn’t just track…
+👉 It enforces focus when you choose.
 ---
 
 # 🚀 FUTURE IDEAS
